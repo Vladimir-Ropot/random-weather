@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Random Weather 🌍</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+</head>
+
+<body>
+
+    <!-- Dynamic weather background -->
+    <div id="weather-background"></div>
+
+    <!-- Settings -->
+    <div id="settings">
+
+        <div id="language-switcher">
+            <button id="lang-ru">RU</button>
+            <button id="lang-en">EN</button>
+        </div>
+
+        <div id="unit-switcher">
+            <button id="unit-celsius">°C</button>
+            <button id="unit-fahrenheit">°F</button>
+        </div>
+
+    </div>
+
+
+    <!-- Main content -->
+    <main id="main-content">
+
+        <header id="page-header">
+
+            <h1>Random Weather</h1>
+
+            <p>Get weather in random city.</p>
+
+            <button id="weather-button">
+                Get Weather
+            </button>
+
+        </header>
+
+
+        <!-- Current weather -->
+        <section id="weather-result">
+
+            <div id="weather-card">
+
+                <div id="weather-card-header">
+
+                    <div>
+                        <h2 id="city">-</h2>
+                        <p id="country">Country: -</p>
+                    </div>
+
+                    <button id="favorite-button">
+                        ⭐
+                    </button>
+
+                </div>
+
+
+                <div id="weather-main">
+
+                    <div id="weather-icon">
+                        🌤️
+                    </div>
+
+                    <div id="temperature-container">
+                        <span id="temperature">
+                            Temperature: -
+                        </span>
+                    </div>
+
+                    <p id="weather">
+                        Weather: -
+                    </p>
+
+                </div>
+
+
+                <div id="weather-details">
+
+                    <div class="weather-detail">
+
+                        <span class="weather-detail-label">
+                            Wind
+                        </span>
+
+                        <span id="wind">
+                            -
+                        </span>
+
+                    </div>
+
+
+                    <div class="weather-detail">
+
+                        <span class="weather-detail-label">
+                            Local time
+                        </span>
+
+                        <span id="time">
+                            -
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- History -->
+    <aside id="history">
+
+        <h2>History</h2>
+
+        <p>No history yet.</p>
+
+    </aside>
+
+
+    <!-- Favorites toggle -->
+    <button id="favorites-toggle">
+        ⭐
+    </button>
+
+
+    <!-- Favorites panel -->
+    <aside id="favorites">
+
+        <div id="favorites-header">
+
+            <h2>Favorites</h2>
+
+            <button id="favorites-close">
+                ×
+            </button>
+
+        </div>
+
+        <div id="favorites-list"></div>
+
+    </aside>
+
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='constants.js') }}"></script>
+    <script src="{{ url_for('static', filename='state.js') }}"></script>
+    <script src="{{ url_for('static', filename='api.js') }}"></script>
+    <script src="{{ url_for('static', filename='weather.js') }}"></script>
+    <script src="{{ url_for('static', filename='history.js') }}"></script>
+    <script src="{{ url_for('static', filename='favorites.js') }}"></script>
+    <script src="{{ url_for('static', filename='settings.js') }}"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
