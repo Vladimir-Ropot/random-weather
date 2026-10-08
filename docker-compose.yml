@@ -1,0 +1,21 @@
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: random_weather
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  web:
+    build: .
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgresql+psycopg://postgres:postgres@db:5432/random_weather
+    ports:
+      - "5000:5000"
+
+volumes:
+  postgres_data:
