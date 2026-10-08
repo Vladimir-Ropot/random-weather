@@ -18,17 +18,17 @@
 
 ## Стек
 
--Python 3.12
--Flask
--SQLAlchemy
--PostgreSQL
--Alembic
--Requests
--JavaScript
--HTML / CSS
--pytest
--Ruff
--Docker / Docker Compose
+- Python 3.12
+- Flask
+- SQLAlchemy
+- PostgreSQL
+- Alembic
+- Requests
+- JavaScript
+- HTML / CSS
+- pytest
+- Ruff
+- Docker / Docker Compose
 
 ## API
 ### GET /api/weather
